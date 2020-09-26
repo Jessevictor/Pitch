@@ -12,6 +12,7 @@
       </div>
     {% endfor %}
 {% endmacro %}
+
 <!-- Displaying comments macro -->
 {% macro displayComments(list_of_comments) %}
 {% for comment in list_of_comments[::-1]  %}
@@ -28,6 +29,7 @@
 {% endmacro %}
 {% macro displayPitchesInCategories(pitches,id)%}
   {% for pitch in pitches[::-1] %}
+
   <!-- add comments on alist -->
     {% if pitch.category_id==id%}
         <div class="panel bg-light text-center style="style="box-shadow: 5px 5px 5px 5px #F2F2F2; padding:10px;">

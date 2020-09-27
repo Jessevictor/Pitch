@@ -7,7 +7,7 @@ class Config:
     
     UPLOADED_PHOTOS_DEST ='app/static/photos'  
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch'
     
     #  email configurations
     MAIL_SERVER = 'smtp.gmail.com'
@@ -28,7 +28,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch'
     # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     
 class DevConfig(Config):

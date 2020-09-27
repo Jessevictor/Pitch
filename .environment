@@ -1,3 +1,4 @@
 export SECRET_KEY='WAGWANRASTAMAN'
 export MAIL_USER='kongoijesse@gmail.com'
 export MAIL_PASSWORD='0758jesse'
+DATABASE_URL='postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'

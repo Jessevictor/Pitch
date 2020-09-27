@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">   
   <title>pitch</title>
 </head>
 
 
 
   <nav class="navbar navbar-expand-lg navbar-d bg-info text-light">
-    <a style="font-size: 30px; color: black; font-family: 'Anton', sans-serif;
-    font-family: 'Lobster', cursive;
-    font-family: 'Ultra', serif;" class="navbar-brand" ><strong>ONE MINUTE PITCH</strong></a>
+    <a style="font-size: 30px; color: black; font-family: 'Fredoka One', cursive;
+   font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka One', cursive;" class="navbar-brand" ><strong>Pitch</strong></a>
     <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="icon-bar"></span>
@@ -45,12 +45,12 @@
       <ul class="nav navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
         <!-- <li style="color:white;padding:15px;">{{current_user.username}}</li> -->
-        <li style="font-size: 20px;" class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fa fa-user"></i><strong class="ml-2">Welcome, {{current_user.username}}</strong></a>
+        <li style="font-size: 20px;" class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fa fa-user"></i><strong class="ml-2">Logged-in, {{current_user.username}}</strong></a>
           <ul class="dropdown-menu bg-info text-center">
-              <li style="font-size: 20px;"><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light " ><i class="icon-envelope"></i><strong>Your profile</strong></a></li>
+              <li style="font-size: 20px;"><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light " ><i class="icon-envelope"></i><strong>Profile</strong></a></li>
               <!-- <li class="divider"></li> -->
               <div class="dropdown-divider"></div>
-              <li style="font-size: 20px;"><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Logout</strong></a></li>
+              <li style="font-size: 20px;"><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Log-out</strong></a></li>
           </ul>
       </li>
       

@@ -21,10 +21,11 @@ class Config:
     SIMPLEMDE_USE_CDN = True
 
 class ProdConfig(Config):
-    if os.environ.get('DATABASE_URL') is None:
-        SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
-    else:
-        SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
+    # if os.environ.get('DATABASE_URL') is None:
+    #     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
+    # else:
+    #     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:0758jesse@localhost/pitch_test'
